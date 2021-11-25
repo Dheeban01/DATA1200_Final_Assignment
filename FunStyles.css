@@ -1,0 +1,321 @@
+@font-face {
+  font-family: Roboto;
+  src: url(./fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./fonts/Roboto/Roboto-Bold.ttf);  
+}
+
+/*This gives the website a scroll function.*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*This is working with the navigation bar.*/
+body{
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-size: 0.5em;
+    min-height: 100vh;
+    width: 100vw;
+    color: whitesmoke; 
+    overflow-x: hidden;  
+}
+
+/*Works with the navigation bar.*/
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;  
+  opacity: 1;
+  height: 20vh;
+}
+
+/*It makes the website more centerend, so the text won't start from edge.*/
+main {
+  display: grid;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  padding-top: 2.5rem;
+}
+
+/*Work on the looks of the navigation bar.*/
+#nav{
+  text-transform: underline;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;  
+  grid-column-gap: 5x;
+  justify-content: space-around;  
+  padding-top: 0.5em;
+  font-size: 1.2em;  
+  text-align: right;
+  z-index: 2;
+  background-color: black;
+  }
+
+/*Work on the looks of the navigation bar.*/
+#navTransitionDiv {
+  height: 20px;
+  background: linear-gradient(180deg,#080808 0%,gray 100%);
+  opacity: 0.9; 
+}
+
+/*This makes a square around the page you are about to click on.*/
+nav a:hover{
+  outline: 1px dashed burlywood;
+  outline-offset: 4px;
+}
+
+/*This shows what page you are on.*/
+.activePage{
+  outline: 1px solid burlywood;
+  outline-offset: 4px;
+}
+
+  /*Works with the text of the navigation bar.*/
+a {
+  color:burlywood;
+  text-decoration: underline;  
+  }
+
+a:hover{
+  color: gray;
+  text-decoration: underline;
+}
+  /*Works with the text.*/
+.text {
+  font-family: sans-serif;
+  padding: 0em 3em 0em 1em;
+  text-align: justify;
+   }
+
+   /*Works with the text.*/
+p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-size: 0.52rem;
+}
+/*"h1" works with the first heading and "h2" works with the second heading.*/
+h1{   
+  text-align: left;
+  font-size: 1.2rem;
+  font-family:'lato', sans-serif;
+  left: 10px;
+  width: 100%;
+  grid-area: 1/1;
+}
+
+h2{  
+  text-align: left;
+  font-size: 0.7rem;
+  font-family:'lato', sans-serif;
+  left: 10px;
+  width: 100%;
+  padding-bottom: 0.1rem;
+  grid-area: 1/1;  
+  }
+
+/*It works with the buttons*/
+button{
+  padding: 20px 20px 20px 20px ;    
+  font-size: medium;
+  margin: 10em 8em 3em 8em;
+  cursor: pointer;
+  background:inherit;
+  border-radius: 3em;
+  border: burlywood 1px solid;    
+  font-weight: bold;
+  word-spacing: 1em;     
+}
+
+/*The buttons' functions.*/
+button:hover {
+  background-color: burlywood;
+  color: black;
+}
+
+/*This works with the footer.*/
+footer {
+  padding-top: 1em;
+  width: 90%;   
+  padding-bottom: 0.5em;
+  font-size: 0.9em; 
+  align-items:flex-end;
+}
+
+/*This works with the background-image. The timeglass. We used "no-repeat" since we wanted only 1 off that image.*/
+.background1{
+  align-items: center;
+  background: url('Img/Clock.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+}
+
+/*This one is working for the footer. The background for the footer.*/
+.background2{
+  align-items: center;
+  background: url('Img/Jul.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+/*We've got different classes called text1, text2, text... It made for the different lines withe text.*/
+.text1{
+  text-align: left;
+  font-family: 'lato', sans-serif;
+  grid-area: 2/1;    
+}
+
+/*We've used grid to give us the choice of where the lines of text would be placed.*/
+.text2{
+  padding-top: 1rem;
+  text-align: left;
+  grid-area: 3/1;
+  margin-bottom: 0.1em;    
+}
+/*We used margin-bottom for both text2 and text4, because it 
+would make space between the lines, since we couldn't use "br".*/
+
+.text3{
+  text-align: left;
+  font-size: century;
+  grid-area: 4/1;    
+}
+
+.text4{
+  text-align: left;
+  font-size: century;
+  grid-area: 5/1;
+}
+
+.text5{
+  text-align: left;
+  font-size: century;    
+  grid-area: 6/1;
+  margin-bottom: 2em;
+}
+
+.text6{    
+  font-size: 2rem !important;   
+  text-align: justify;
+  grid-area: 7/1;
+  margin-right: 55%;
+  padding-bottom: 4.5rem;
+}
+
+/*It make sure that the images at the bottom is filling the right areas.*/
+.Fun2{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+/* Sets the specifications for the text in the footer.*/
+.Claus{
+margin-left: 0.5rem;
+margin-right: 0.5rem;
+padding-bottom: 0.2rem;
+}
+
+/*The first image with the snowman.*/
+.img2{
+  width: 100%;
+  height: 100%;
+  grid-area: 1/1;
+  size: cover;
+}
+/*Works with the text with img2 as the background.*/
+p.img2{
+  left: 2rem;
+  padding-top: 4rem;
+  font-family: "Mountains of Christmas";
+  font-size: 0.8rem;
+  text-align: right;
+  padding-right: 2rem;
+}
+.kilde2{
+  grid-area: 2/1;
+}
+
+/*This works with the last image, the image of the christmas tree at right bottom.*/
+.img3{
+  width: 100%;
+  grid-area: 2/2;
+  size: 506.5px 285.08px;
+}
+.kilde3{
+  grid-area: 1/2;
+}
+
+/*This works with the second image with the snowman, flipped.*/
+.img4{
+  height: 100%;
+  width: 100%;
+  grid-area: 1/2;
+}
+
+/*This works with the text for the placed in front of img4.*/
+p.img4{
+  padding-top: 5rem;
+  font-family: "Mountains of Christmas";
+  font-size: 0.8rem;
+}
+
+/*This works with the third image, the image of the chrsitmas tree.*/
+.img5{
+  width: 100%;
+  grid-area: 2/1;
+  size: cover;
+}
+.img6{
+  height: 16rem;
+  width: 100%;
+  size: cover;
+}
+
+/*This works with the sound-button, placement*/
+#sound_button{
+  background-color: burlywood;
+  border-radius: 100%;
+  position: fixed;
+  width: 4%;
+  height: auto;
+  right: 3%;
+  bottom: 8%;
+  justify-content: center;
+}
+/*This works with the looks of the sound-button.*/
+#sound_button_icon{
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: relative;
+top: 50%;
+}
+
+/* For skjermer som er større enn 600px */
+@media only screen
+and (min-width: 600px){
+    html {
+        font-size: 1.7rem;
+    }
+    .text6{ 
+      grid-template-columns: 45% 55%;      
+    }
+}
+
+/* For skjermer som er større enn 960px */
+@media only screen and (min-width: 960px){
+    html {
+        font-size: 3rem;
+    }   
+
+    .text6{ 
+      grid-template-columns: 40% 60%;      
+    }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="FunStyles.css" type="text/css" rel="stylesheet">   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Page</title>
+    <div class="auto.audio">
+        <!--Here we have the song that plays in the background when you click on the fun page. We used "autoplay" 
+        so the music plays when you click on the fun-page.-->
+        <audio id="music" autoplay>
+            <source src="Media/Mariah Carey - All I Want for Christmas Is You (Make My Wish Come True Edition).mp3"
+                type="audio/mpeg" alt="In the background the 
+        song 'All I want for christmas 
+        is you' by Mariah Carey is playing. 
+        There is a button to mute the song at 
+        bottom right corner.">
+        </audio>
+    </div>
+</head>
+
+<body>
+    <!--Here we have a navigation bar that guides you to the different pages.-->
+    <div class="background1">
+        <header>
+            <nav id="nav">
+                <a href="index.html">Home</a>
+                <a href="TopicalInfo.html">Topical Info</a>
+                <a href="Reflection.html">Reflection</a>
+                <a href="Accessibility.html">Accessibility</a>
+                <a class="activePage" href="Fun.html">Fun</a>
+            </nav>
+            <!--div used to create the transparency effect under the navigation bar-->
+            <div id="navTransitionDiv"></div>
+        </header>
+        <main>
+            <div id="sound_button">
+                <img id="sound_button_icon" src="Img/volume-high-outline.svg" alt="You have now turned on the music.">
+            </div>
+            <!--Class used for making titles.-->
+            <h1> The Funny Page </h1>
+            <div class="text1">
+                <h2><small><strong>Funny, funny, welcome to the fun page!</small>
+                    </strong>
+                </h2>
+            </div>
+            <!--The text-classes are used for making different sizes and margins for the lines.-->
+            <div class="text2">
+                <p>
+                    Roses are red
+                </p>
+            </div>
+            <div class="text3">
+                <p>
+                    Violets are <em>blue</en>
+                </p>
+            </div>
+            <!--The reason behind all of the text classes is that we couldn't 
+                use "br" to make space between the lines, the text.-->
+            <div class="text4">
+                <p>
+                    Here We Are
+                </p>
+            </div>
+            <div class="text5">
+                <p>
+                    The greatest Web-Developing <em>CREW</em>
+                </p>
+            </div>
+
+            <div class="text6">
+                <p>
+                    <small>New students might have trouble with copying, but
+                        we came up with a new word.
+                        in fact the word is
+                        <strong>"Plagiarism".</strong>
+                        That might be needy when writing an essay. Speaking of essays. There are many spaces in just one
+                        essay. Now what is an astronaut's favorite part on a computer?
+                        It is the <strong>Space-Bar.</strong>
+                    </small>
+                </p>
+            </div>
+    </div>
+    <!--Underneath we have different classes the that makes the images fit perfect to the website. 
+        and we have "alt text" for screenreaders.-->
+    <img class="img6" src="Img/Reindeer.jpg" alt="There is an image with Santa Claus on his sleigh. His reindeers are dragging his sleigh.">
+    <div class="Fun2">
+        <img class="img2" src="Img/Jul.jpg" alt="Here we have a picture of 
+                                                  a snowman, with a scarf with stripes and 
+                                                  hat with stipes. The picture standing in the front of a red 
+                                                  background. It takes 50% og the page.">
+        <p class="img2">
+            Merry Christmas!
+        </p>
+
+        <img class="img3" src="Img/ChristmasTree.png" alt="Here we have a picture of 
+                                                            a christmas tree in black, and standing in the front of a red 
+                                                            background. It takes 50% og the page.">
+        <section class="kilde3">
+
+        </section>
+
+        <img class="img4" src="Img/JulFlip.jpg" alt="Here we have a picture of 
+                                                     a snowman, with a scarf with stripes and 
+                                                     hat with stipes. The picture standing in the front of a red 
+                                                     background. It is flipped from right to left, to left to right
+                                                     and takes 50% og the page.">
+        <p class="img4">
+            Happy Holidays!
+        </p>
+
+
+        <img class="img5" src="Img/ChristmasTreeFlip.png" alt=" Here we have a picture of 
+        a christmas tree in black, and standing in the front of a red 
+        background. It is flipped from left to right, to right to left. 
+        takes 50% og the page.The picture is placed on the right.">
+        <section>
+
+        </section>
+    </div>
+    <!--Footer-->
+    <footer class="background2">
+        <div class="Claus">
+            &copy; Website created as the final asingment for DATA1200 at OsloMet.
+            All pictures are online picutres from... <a href="https://learnenglishteens.britishcouncil.org/"
+                target="blank"> British Council</a> and
+            <a href="https://pixabay.com/" target="blank"> pixabay. </a>
+            The background picture is taken from <a href="https://www.liquidplanner.com/" target="blank">Liquad
+                Planner.</a> and <a href="https://no.depositphotos.com/vector-images/reindeers.html" target="blank">
+                depositphotos.</a> The song is sung by Mariah Carey and written
+            by her and Walter Afanasieff. It's called <a href="https://www.youtube.com/watch?v=aAkMkVFwAoo"
+                target="blank">"All I want for Christmas is you".</a>
+        </div>
+    </footer>
+    </main>
+    <!--Underneath we have buttons that lets you mute and unmute the music.-->
+    <script>
+        const volume_src = "Img/volume-high-outline.svg";
+        const mute_src = "Img/volume-mute-outline.svg";
+        const sound_button = document.getElementById("sound_button");
+        const sound_button_icon = document.getElementById("sound_button_icon");
+        const music = document.getElementById("music");
+        let audio_on = true;
+
+        sound_button.addEventListener("click", toggle_audio);
+
+        function toggle_audio() {
+            if (audio_on) {
+                music.pause();
+                sound_button_icon.src = mute_src;
+                sound_button_icon.alt = "You have now turned off the music.";
+            }
+            else {
+                music.play();
+                sound_button_icon.src = volume_src;
+                sound_button_icon.alt = "You have now turned on the music.";
+            }
+            audio_on = !audio_on;
+        }
+    </script>
+</body>
+
+</html>

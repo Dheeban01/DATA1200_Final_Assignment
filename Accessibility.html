@@ -2,185 +2,213 @@
 <html lang="en">
 
 <head>
-  <link href="commonStyles.css" type="text/css" rel="stylesheet">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accessibility</title>
+    <link href="commonStyles.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessibility</title>
 </head>
 
 <body>
-  <div id="page">
 
     <header>
-      <nav tabindex="0">
-        <ul>
-          <li> <a href="index.html">Home</a> </li>
-          <li> <a href="TopicalInfo.html">Topical Info</a> </li>
-          <li> <a href="Reflection.html">Reflection</a> </li>
-          <li> <a class="activePage" href="Accessibility.html">Accessibility</a> </li>
-          <li> <a href="Fun.html">Fun</a> </li>
-        </ul>
-      </nav>
-      <!--div used to create the transparency effect under the navigation bar-->
-      <div id="navTransitionDiv"></div>
+        <nav tabindex="0">
+            <ul>
+                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="TopicalInfo.html">Topical Info</a> </li>
+                <li> <a href="Reflection.html">Reflection</a> </li>
+                <li> <a class="activePage" href="Accessibility.html">Accessibility</a> </li>
+                <li> <a href="Fun.html">Fun</a> </li>
+            </ul>
+        </nav>
+        <!--div used to create the transparency effect under the navigation bar-->
+        <div id="navTransitionDiv"></div>
     </header>
     <main>
-      <!--mainContentButton class is used for accessibility pruposes to send the user back to the main content of the page -->
-      <button class="mainContentButton" type="button"> <a href="#mainContent"> Main Content</a>
-      </button>
-      <h1 id="mainContent"> Accessibility </h1>
-      <section>
-        <h2>What is web accesibility?</h2>
-        <p>Web accessibility is the wide known phenomenon that a website should be accessible to as many individuals as
-          possible (Persson et. al. 2015). A website with good web accessibility is easy to access and use for all
-          people. This includes people with and without disabilities. For instance, normal people using other devices
-          with different screen sizes, or people with visual impairments.</p>
-        <p>For this assignment we attempted to remove barriers which made our website inaccessible.</p>
-      </section>
-      <section>
-        <h2>Content</h2>
-        <ul>
-          <li>1 How did we test web accessibility?</li>
-          <ul>
-            <li>1.1 Things we have changed</li>
-            <li>1.2 Change not needed</li>
-            <ul>
-              <li>1.2.1 Contradictory feedback</li>
+        <!--mainContentButton class is used for accessibility pruposes to send the user back to the main content of the page -->
+        <button class="mainContentButton" type="button"> <a href="#mainContent"> Main Content</a>
+        </button>
+        <h1 id="mainContent"> Accessibility </h1>
+        <section>
+            <h2>What is web accesibility?</h2>
+            <p>Web accessibility is the wide known phenomenon that a website should be accessible to as many individuals
+                as
+                possible (Persson et. al. 2015). A website with good web accessibility is easy to access and use for all
+                people. This includes people with and without disabilities. For instance, normal people using other
+                devices
+                with different screen sizes, or people with visual impairments.</p>
+            <p>For this assignment we attempted to remove barriers which made our website inaccessible.</p>
+        </section>
+        <section class="content">
+            <h2>Content</h2>
+            <ul class="contentList">
+                <li><a href="#HowDidWeTestWebAccessibility">1 How did we test web accessibility?</a></li>
+                <ul>
+                    <li class = "listeLevel2"><a href="#ThingsWeHaveChanged">1.1 Things we changed</a></li>
+                    <ul>
+                        <li class = "listeLevel3"><a href="#NavigationBar">1.1.1 Navigation bar</a></li>
+                        <li class = "listeLevel3"><a href="#SkipToMainContent">1.1.2 "Skip to main content"</a></li>
+                    </ul>
+                    <li class = "listeLevel2"><a href="#ChangeNotNeeded">1.2 Change not needed</a></li>
+                    <ul>
+                        <li class = "listeLevel3"><a href="#h1h2h3Format">1.2.1 Format for h1, h2 and h3</a></li>
+                        <li class = "listeLevel3"><a href="#PrimaryLanguage">1.2.2 Primary language</a></li>
+                    </ul>
+                    <li class = "listeLevel2"><a href="#ContradictoryFeedback">1.3 Contradictory feedback</a></li>
+                    <ul>
+                        <li class = "listeLevel3"><a href="#AltTextForImages">1.3.1 Alt text for images</a></li>
+                    </ul>
+                </ul>
+                <li><a href="#WebAccesibilityBeyondTheAccessibilityTest">2 Web accesibility beyond the test</a></li>
             </ul>
-          </ul>
-          <li>2 Web accesibility beyond the test</li>
-        </ul>
-      </section>
-      <section>
-        <h2>How did we test web accessibility?</h2>
-        <p>To test web accessibility, we used an automated test, <a href="https://achecker.us/checker/index.php"
-            target="blank">AChecker</a>, on all our pages. The website evaluated our
-          HTML-code and gave us feedback on how we could improve our accessibility. We aimed for the grade AA or higher,
-          since this indicated that there were no known problems with our code. </p>
-        <div class="generalAccessibilityReview">
-          <figure>
-            <img class="generalAccessibilityReviewBefore" src="Img/accessibilityReviewMainBefore.png"
-              alt="This is a screenshot from the website Achecker that show that this website is AA graded and that there are no knwon accessibility problems.">
-            <figcaption class="figcaptionAccessibility" class="generalAccessibilityReviewBefore">Accessibility review
-              made automatically by the website <a href="https://achecker.us/checker/index.php"
-                target="blank">AChecker</a>. Picture of the review of the innitial code. </figcaption>
-          </figure>
-          <figure>
-          <img class="generalAccessibilityReviewAfter" src="Img/accessibilityReviewMainAfter.png"
-            alt="This is a screenshot from the website Achecker that show that this website is AA graded and that there are no knwon accessibility problems.">
-          <figcaption class="figcaptionAccessibility" class="generalAccessibilityReviewAfter">Accessibility review made
-            automatically by the website <a href="https://achecker.us/checker/index.php" target="blank">AChecker</a>.
-            Picture of the review after the suggested accessibility changes were implementet.</figcaption>
-          </figure>
-        </div>
-        <p>Even so, we still made active decisions
-          to improve our accessibility beyond what the test showed. The test also gave us a list of potential problems,
-          which we carefully found and assessed. We fixed the ones we thought were applicable to our case.</p>
-      </section>
-      <section>
-        <h3>Things we have changed</h3>
-        <h4>Navigation bar</h4>
-        <div class="navBarGrid">
-          <figure>
-            <img id="navBarAccessibilityCheck" src="Img/navbarChangeNecessary.png"
-              alt="This is a screenshot from the website Achecker that show a potential problem in our HTML code with the navigation bar.">
-            <figcaption class="figcaptionAccessibility">Issue dettected by <a
-                href="https://achecker.us/checker/index.php" target="blank">AChecker</a> </figcaption>
-          </figure>
-          <figure>
-            <img id="navBarBefore" src="Img/navBarBefore.png"
-              alt="This is a screenshot of our HTML document showing the code for the navigation bar before we changed it. The code is white text on a black backgrounnd">
-            <figcaption class="figcaptionAccessibility">Code before the accessibility check</figcaption>
-          </figure>
-        </div>
-        <p>According to the automated check, the navigation bar is a list of links and must be marked appropriately.
-          Therefore, we encapsuled our navigation bar with the semantic tag &lt;ul&gt; and the corresponding
-          &lt;li&gt; for each item on the list.
-          This ensures an isolated section with information, with <strong>excellent</strong> structure.</p>
-        <figure>
-          <img src="Img/navBarAfter.png"
-            alt="This is a screenshot of our HTML document showing the code for the navigation bar after we changed it to comply with accessibility. The code is white text on a black backgrounnd">
-          <figcaption class="figcaptionAccessibility">Code after the accessibility check</figcaption>
-        </figure>
+        </section>
+        <section>
+            <h2 id="HowDidWeTestWebAccessibility">How did we test web accessibility?</h2>
+            <p>To test web accessibility, we used an automated test, <a href="https://achecker.us/checker/index.php"
+                    target="blank">AChecker</a>, on all our pages. The website evaluated our
+                HTML-code and gave us feedback on how we could improve our accessibility. We aimed for the grade AA or
+                higher,
+                since this indicated that there were no known problems with our code. </p>
+            <div class="generalAccessibilityReview">
+                <figure>
+                    <img class="generalAccessibilityReviewBefore" src="Img/accessibilityReviewMainBefore.png"
+                        alt="This is a screenshot from the website Achecker that show that this website is AA graded and that there are no knwon accessibility problems.">
+                    <figcaption class="figcaptionAccessibility" class="generalAccessibilityReviewBefore">Accessibility
+                        review made automatically by the website <a href="https://achecker.us/checker/index.php"
+                            target="blank">AChecker</a>. Picture of the review of the innitial code. </figcaption>
+                </figure>
+                <figure>
+                    <img class="generalAccessibilityReviewAfter" src="Img/accessibilityReviewMainAfter.png"
+                        alt="This is a screenshot from the website Achecker that show that this website is AA graded and that there are no knwon accessibility problems.">
+                    <figcaption class="figcaptionAccessibility" class="generalAccessibilityReviewAfter">Accessibility
+                        review made automatically by the website <a href="https://achecker.us/checker/index.php"
+                            target="blank">AChecker</a>. Picture of the review after the suggested accessibility changes
+                        were implementet.</figcaption>
+                </figure>
+            </div>
+            <p>Even so, we still made active decisions
+                to improve our accessibility beyond what the test showed. The test also gave us a list of potential
+                problems,
+                which we carefully found and assessed. We fixed the ones we thought were applicable to our case.</p>
+        </section>
+        <section>
+            <h3 id="ThingsWeHaveChanged">Things we have changed</h3>
+            <h4 id="NavigationBar">Navigation bar</h4>
+            <div class="navBarGrid">
+                <figure>
+                    <img id="navBarAccessibilityCheck" src="Img/navbarChangeNecessary.png"
+                        alt="This is a screenshot from the website Achecker that show a potential problem in our HTML code with the navigation bar.">
+                    <figcaption class="figcaptionAccessibility">Issue dettected by <a
+                            href="https://achecker.us/checker/index.php" target="blank">AChecker</a> </figcaption>
+                </figure>
+                <figure>
+                    <img id="navBarBefore" src="Img/navBarBefore.png"
+                        alt="This is a screenshot of our HTML document showing the code for the navigation bar before we changed it. The code is white text on a black backgrounnd">
+                    <figcaption class="figcaptionAccessibility">Code before the accessibility check</figcaption>
+                </figure>
+            </div>
+            <p>According to the automated check, the navigation bar is a list of links and must be marked appropriately.
+                Therefore, we encapsuled our navigation bar with the semantic tag &lt;ul&gt; and the corresponding
+                &lt;li&gt; for each item on the list.
+                This ensures an isolated section with information, with <strong>excellent</strong> structure.</p>
+            <figure>
+                <img src="Img/navBarAfter.png"
+                    alt="This is a screenshot of our HTML document showing the code for the navigation bar after we changed it to comply with accessibility. The code is white text on a black backgrounnd">
+                <figcaption class="figcaptionAccessibility">Code after the accessibility check</figcaption>
+            </figure>
 
-        <h4>"Skip to main content" button (with link)</h4>
-        <p>According to the automated check we needed a “skip to main content” button. This will elevate our pages
-          because our users can easily skip to the main content. Without this button, the process of navigating the
-          website could be a tedious process for various people, especially for our friends with visual impairments.
-        </p>
-        
-      </section>
+            <h4 id="SkipToMainContent">"Skip to main content" button (with link)</h4>
+            <p>According to the automated check we needed a “skip to main content” button. This will elevate our pages
+                because our users can easily skip to the main content. Without this button, the process of navigating
+                the website could be a tedious process for various people, especially for our friends with visual
+                impairments.
+            </p>
+            <figure>
+                <img src="Img/toMainContentAfter.png"
+                  alt="This is a screenshot of our HTML document showing the code for the newly created &quot;skip to main content&quot; button that is placed in the upper right side of the screen. The code is white text on a black backgrounnd">
+                <figcaption class="figcaptionAccessibility">Code after the accessibility check</figcaption>
+              </figure>
+      
+        </section>
 
-      <section>
-        <h3>Change not needed</h3>
-        <h4>Format for h1, h2 and h3</h4>
-        <p>According to the automated check, h1, h2 are potentially used for formatting. This is not the case. We used
-          our header elements as section headers to structure our different themes. We only used formatting in a CSS
-          file that is separated from the HTML files that we used in the accessibility check.</p>
-        <h4>Primary language</h4>
-        <p>According to the automated check, our webpages should only have one primary language. However, we used
-          dummy text because it was allowed in our task description. Therefore, we choose to ignore the feedback. </p>
+        <section>
+            <h3 id="ChangeNotNeeded">Change not needed</h3>
+            <h4 id="h1h2h3Format">Format for h1, h2 and h3</h4>
+            <p>According to the automated check, h1, h2 are potentially used for formatting. This is not the case. We
+                used our header elements as section headers to structure our different themes. We only used formatting in a
+                CSS file that is separated from the HTML files that we used in the accessibility check.</p>
+            <h4 id="PrimaryLanguage">Primary language</h4>
+            <p>According to the automated check, our webpages should only have one primary language. However, we used
+                dummy text because it was allowed in our task description. Therefore, we choose to ignore the feedback.
+            </p>
 
-        <h3>Contradictory feedback</h3>
-        <div class="contradictoryFeedback">
-          <figure>
-            <img id="altTextTooLong" src="Img/altTextTooLong.png"
-              alt="This is a screenshot from the website Achecker that informs is that the description text of the picture is too long.">
-            <figcaption class="figcaptionAccessibility"></figcaption>
-          </figure>
-          <figure>
-            <img id="altTextTooShort" src="Img/altTextTooShort.png"
-              alt="This is a screenshot from the website Achecker that informs us that the description text of the picture is too short. The picture has white text on a dark gray background.">
-            <figcaption class="figcaptionAccessibility"></figcaption>
-          </figure>
-        </div>
-        <h4>Alt text for images</h4>
-        <p>According to the automated check, we had two potential problems with our “alt” attribute to all our images.
-          First, it assumed our alt descriptions should have been longer. Then it commented that our texts were too
-          long. We choose to disregard both statements. Which lead to a detailed visual description for the users who
-          cannot see them. Our alt text make it a better experience using a screen reader.</p>
-      </section>
-      </section>
-      <section>
-        <figure> 
-        <img src="Img/colourBlindPic.png" alt = "Picture of 6 colourblid tests. The tests are round picutres of coloured dots containing images of different coloured numbers">
-        <figcaption>  &copy; Image source <a href="ttps://www.vecteezy.com/vector-art/151303-colourblind-test"
-          target="blank"> vecteezy.com </a> </figcaption>
-      </figure>
-        <h2>Web accessibility beyond the accesibility test</h2>
-        <p>We used other accessibility tests to improve our visually impaired users experience. For instance, we used
-          strong color contrasts for our texts, images, and background images. We tested our website used an online <a
-            href="https://www.color-blindness.com/coblis-color-blindness-simulator/" target="blank">colorblind test</a>
-          to make sure
-          colorblind people had no trouble seeing the different colors in our website. We also made sure to use the
-          right sematic tags, and lines under all our links, so it would be easier to see the links properly. Lastly, we
-          used fonts which makes it easy to read. As a result, people with visual impairments can still enjoy our page,
-          without compromise. </p>
-        <p>Another accessibility decision that we had to take was one relating to this particular page. On other pages
-          of this website we used the tag to describe the content of each picture. However, the pictures on the
-          accessibility page are of a different nature. They do not show portraits or general purpose pictures, but they
-          are pictures containing text. And not any kind of text that can be easily understood by people without the
-          appropriate background, but very technical text containing HTML code and specialized text. We are aware that
-          the <a
-            href=“https://usability.yale.edu/web-accessibility/articles/images?fbclid=IwAR0pJYePWWRXRLb0D7vg4sVKBI8Ir1EgwyjB3PTAqr0w2fAHb8_I_2A7Als#images-of-text”
-            target="blank"> Usability & Web Accessibility </a> made by the Yale University advises that the &lt;alt&gt;
-          should match exactly the text contained in the picture. However, in this case we had a group discussion and we
-          decided that more meaningful than simply pasting the HTML code in the &lt;alt&gt; tag would be to describe the
-          meaning of the content in the respective text.</p>
-        <p>Some other coding changes we made include correct sematic tags and attributes accordingly. We used the
-          &lt;html&gt;“lang” attribute to define our primary language. Furthermore, for all our images, we used the
-          “alt” attribute. Lastly, we used “back to main content” buttons for our website for easy “scrolling” and tried
-          to make our website easy to navigate.</p>
-      </section>
-      <hr>
-      <footer class="copyright">
-        &copy; This is a project created for the final assignment in DATA1200. This page presents the accessibility part
-        of our
-        website. We have checked the accessibility of the website on the <a href="https://achecker.us/checker/"
-          target="blank"> AChecker </a> website.
-      </footer>
-  </div>
-  </main>
+            <h3 id="ContradictoryFeedback">Contradictory feedback</h3>
+            <div class="contradictoryFeedback">
+                <figure>
+                    <img id="altTextTooLong" src="Img/altTextTooLong.png"
+                        alt="This is a screenshot from the website Achecker that informs is that the description text of the picture is too long.">
+                    <figcaption class="figcaptionAccessibility"></figcaption>
+                </figure>
+                <figure>
+                    <img id="altTextTooShort" src="Img/altTextTooShort.png"
+                        alt="This is a screenshot from the website Achecker that informs us that the description text of the picture is too short. The picture has white text on a dark gray background.">
+                    <figcaption class="figcaptionAccessibility"></figcaption>
+                </figure>
+            </div>
+            <h4 id="AltTextForImages">Alt text for images</h4>
+            <p>According to the automated check, we had two potential problems with our “alt” attribute to all our
+                images.
+                First, it assumed our alt descriptions should have been longer. Then it commented that our texts were
+                too
+                long. We choose to disregard both statements. Which lead to a detailed visual description for the users
+                who
+                cannot see them. Our alt text make it a better experience using a screen reader.</p>
+        </section>
+        </section>
+        <section>
+            <h2 id="WebAccessibilityBeyondTheAccessibilityTest">Web accessibility beyond the accesibility test</h2>
+            
+            <p>We used other accessibility tests to improve our visually impaired users experience. For instance, we
+                used
+                strong color contrasts for our texts, images, and background images. We tested our website used an
+                online <a href="https://www.color-blindness.com/coblis-color-blindness-simulator/"
+                    target="blank">colorblind test</a> to make sure
+                colorblind people had no trouble seeing the different colors in our website. We also made sure to use
+                the
+                right sematic tags, and lines under all our links, so it would be easier to see the links properly.
+                Lastly, we
+                used fonts which makes it easy to read. As a result, people with visual impairments can still enjoy our
+                page,
+                without compromise. </p>
+                <p>Another accessibility decision that we had to take was one relating to this particular page. On other pages
+                    of this website we used the tag to describe the content of each picture. However, the pictures on the
+                    accessibility page are of a different nature. They do not show portraits or general purpose pictures, but they
+                    are pictures containing text. And not any kind of text that can be easily understood by people without the
+                    appropriate background, but very technical text containing HTML code and specialized text. We are aware that
+                    the <a
+                      href="https://usability.yale.edu/web-accessibility/articles/images?fbclid=IwAR0pJYePWWRXRLb0D7vg4sVKBI8Ir1EgwyjB3PTAqr0w2fAHb8_I_2A7Als#images-of-text"
+                      target="blank"> Usability & Web Accessibility </a> made by the Yale University advises that the &lt;alt&gt;
+                    should match exactly the text contained in the picture. However, in this case we had a group discussion and we
+                    decided that more meaningful than simply pasting the HTML code in the &lt;alt&gt; tag would be to describe the
+                    meaning of the content in the respective text.</p>
+            <p>Some other coding changes we made include correct sematic tags and attributes accordingly. We used the
+                &lt;html&gt;“lang” attribute to define our primary language. Furthermore, for all our images, we used
+                the
+                “alt” attribute. Lastly, we used “back to main content” buttons for our website for easy “scrolling” and
+                tried
+                to make our website easy to navigate.</p>
+                <figure> 
+                    <img src="Img/colourBlindPic.png" alt = "Picture of 6 colourblid tests. The tests are round picutres of coloured dots containing images of different coloured numbers">
+                    <figcaption>  &copy; Image source <a href="ttps://www.vecteezy.com/vector-art/151303-colourblind-test"
+                      target="blank"> vecteezy.com </a> </figcaption>
+                  </figure>
+        </section>
+        <hr>
+        <footer class="copyright">
+            &copy; This is a project created for the final assignment in DATA1200. This page presents the accessibility
+            part of our website. We have checked the accessibility of the website on the <a href="https://achecker.us/checker/"
+                target="blank"> AChecker </a> website.
+        </footer>
+    </main>
 </body>
 
 </html>

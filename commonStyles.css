@@ -125,6 +125,7 @@ div.imaginarypeople {
   display: grid;
   grid-template-columns: 50% 50%; 
   grid-template-rows: 33% 33% 34%;
+  text-align: left;
 }
 /* common settings for links*/
 a {
@@ -185,7 +186,7 @@ figure{
 /* setting general display atributes of the caption figures */
 figcaption{
   padding: 2em 0em; 
-  text-align: justify;
+  text-align: left;
 }
 /* setting general display atributes of the caption figures */
 button {
@@ -223,11 +224,13 @@ hr{
 /* sets the general structure of the footer*/
 footer {
   padding-top: 1em;
-  width: 90%;   
+  width: 100%;   
   padding-top: 1em;
   font-size: 0.9em; 
   align-items:flex-end;
 }
+
+
 /* sets the border radius and shaddow for the small "portrait" pictures on the hompeage*/
 .portrait{
   border-radius: 3em;
@@ -277,6 +280,19 @@ footer {
 ul{
   list-style: none;
 }
+.listeLevel2{
+  padding-left: 5px;
+}
+.listeLevel3{
+  padding-left: 0.2em;
+}
+.contentList{
+  border: 0.1rem burlywood solid;
+  background-color:rgb(10, 10, 10);
+  padding:1rem;
+  margin-right: 0%;
+}
+
 
 /* For screens with a resolution higher than 600px */
 @media only screen
@@ -321,6 +337,9 @@ and (min-width: 600px){
     grid-template-columns: 33% 33% 34%; 
     grid-template-rows: 50% 50%;
     }
+}
+.contentList{
+  margin-right:40%;
 }
 
 /* For screen with a resolution higher than 960px */
@@ -381,5 +400,8 @@ and (min-width: 600px){
   }
   #navBarBefore{
     grid-column-start: 2;
+  }
+  .contentList{
+    margin-right:50%;
   }
 }

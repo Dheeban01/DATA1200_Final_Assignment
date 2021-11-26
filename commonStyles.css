@@ -102,6 +102,9 @@ nav ul{
     word-spacing: 0.1em;  
     z-index: 2;
   }
+  #mainContent{
+    padding-top: 15%;
+  }
   /* positioning of the button sending the user to the second half of the homepage*/
  #bio{
     padding-top: 4em;
@@ -135,7 +138,7 @@ a:hover{
 }
   
 /* setting consistent fonts for the text sections, used for accessibility of dyslexic people */
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
     font-family: 'Lato', sans-serif;
 }
 h1, h2{
@@ -161,14 +164,23 @@ h1, h2{
       font-size: 0.9rem;            
     }
 
-  p {
+  h4, p, ul {
     font-size: 0.8rem;
+    padding-top: 0.5rem;
     margin-block-start: 0em; /* overrides user agent stylesheet */
     margin-block-end: 0em; /* overrides user agent stylesheet */
   }
 /* sets all images to fit into their respective container. Very important! */
 img{
   width: 100%; 
+}
+/* overriding user agent stylesheet defaults */
+figure{
+  padding-top: 1rem;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
 }
 /* setting general display atributes of the caption figures */
 figcaption{
@@ -221,6 +233,50 @@ footer {
   border-radius: 3em;
   box-shadow: 5px 5px 5px 5px lightskyblue;
 }
+/* class used to place a grid around the pictures on the Accessibility page*/
+.figcaptionAccessibility{
+  padding-top: 2px;
+  padding-bottom: 1em;
+}
+.generalAccessibilityReview{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+}
+#generalAccessibilityReviewBefore{
+  grid-row-start: 1;
+}
+#generalAccessibilityReviewAfter{
+  grid-row-start: 2;
+}
+.contradictoryFeedback{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+}
+#altTextTooShort{
+  grid-row-start: 1;
+}
+#altTextTooLong{
+  grid-row-start: 2;
+}
+.navBarGrid{
+  display: grid;
+  grid-template-columns: auto; 
+  grid-template-rows: auto auto;
+}
+#navBarAccessibilityCheck{
+  grid-row-start: 1;
+}
+#navBarBefore{
+  grid-row-start: 2;
+}
+
+ul{
+  list-style: none;
+}
 
 /* For screens with a resolution higher than 600px */
 @media only screen
@@ -238,6 +294,9 @@ and (min-width: 600px){
   navigation bar at screen resolutions closer to the phone resolution */
   .mainContentButton{    
     top: 7rem;   
+  }
+  #mainContent{
+    padding-top: 10%;
   }
 
 /* adjusts the margin of main in accordance with the screen resolution */
@@ -273,7 +332,9 @@ and (min-width: 600px){
   nav{
     font-size: 1.3em; /* adjusts the navigation bar font size in accordance to the screen resolution*/
   }
-
+  #mainContent{
+    padding-top: 7%;
+  }
   #frontpage{     
     margin-top: 4rem; /*adjusts distance from the top of the of the main content of each page in accordance to the screen resolution*/
   }
@@ -285,5 +346,40 @@ and (min-width: 600px){
   div.imaginarypeople {      
     grid-template-columns: 20% 20% 20% 20% 20%;    
     grid-template-rows: 100%    
+  }
+  /* addapting the grid with the accessibility check images into a structure that is appropriate for the screen resolution */
+  .generalAccessibilityReview{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
+  .generalAccessibilityReviewBefore{
+    grid-column-start: 1;
+  }
+  .generalAccessibilityReviewAfter{
+    grid-column-start: 2;
+  }
+  .contradictoryFeedback{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
+  #altTextTooShort{
+    grid-column-start: 1;
+  }
+  #altTextTooLong{
+    grid-column-start: 2;
+  }
+
+  .navBarGrid{
+    display: grid;
+    grid-template-columns: auto auto; 
+    column-gap: 2px;
+  }
+  #navBarAccessibilityCheck{
+    grid-column-start: 1;
+  }
+  #navBarBefore{
+    grid-column-start: 2;
   }
 }

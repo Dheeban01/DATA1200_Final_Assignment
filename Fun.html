@@ -2,25 +2,21 @@
 <html lang="en">
 
 <head>
-    <link href="FunStyles.css" type="text/css" rel="stylesheet">   
+    <link href="FunStyles.css" type="text/css" rel="stylesheet">
+    <link href="fun.css" type="text/css" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun Page</title>
+</head>
+
+<body>
     <div class="auto.audio">
         <!--Here we have the song that plays in the background when you click on the fun page. We used "autoplay" 
         so the music plays when you click on the fun-page.-->
         <audio id="music" autoplay>
-            <source src="Media/Mariah Carey - All I Want for Christmas Is You (Make My Wish Come True Edition).mp3"
-                type="audio/mpeg" alt="In the background the 
-        song 'All I want for christmas 
-        is you' by Mariah Carey is playing. 
-        There is a button to mute the song at 
-        bottom right corner.">
+            <source src="MariahCarey-AllIWantforChristmasIsYou(MakeMyWishComeTrueEdition).mp3" type="audio/mpeg">
         </audio>
     </div>
-</head>
-
-<body>
     <!--Here we have a navigation bar that guides you to the different pages.-->
     <div class="background1">
         <header>
@@ -34,15 +30,18 @@
             <!--div used to create the transparency effect under the navigation bar-->
             <div id="navTransitionDiv"></div>
         </header>
+
+        <div id="sound_button">
+            <img id="sound_button_icon" src="Img/volume-high-outline.svg" alt="You have now turned on the music.">
+        </div>
         <main>
-            <div id="sound_button">
-                <img id="sound_button_icon" src="Img/volume-high-outline.svg" alt="You have now turned on the music.">
-            </div>
             <!--Class used for making titles.-->
             <h1> The Funny Page </h1>
             <div class="text1">
-                <h2><small><strong>Funny, funny, welcome to the fun page!</small>
-                    </strong>
+                <h2>
+                    <small>
+                        <strong>Funny, funny, welcome to the fun page!</strong>
+                    </small>
                 </h2>
             </div>
             <!--The text-classes are used for making different sizes and margins for the lines.-->
@@ -53,7 +52,7 @@
             </div>
             <div class="text3">
                 <p>
-                    Violets are <em>blue</en>
+                    Violets are <em>blue</em>
                 </p>
             </div>
             <!--The reason behind all of the text classes is that we couldn't 
@@ -82,9 +81,11 @@
                 </p>
             </div>
     </div>
+    
     <!--Underneath we have different classes the that makes the images fit perfect to the website. 
         and we have "alt text" for screenreaders.-->
-    <img class="img6" src="Img/Reindeer.jpg" alt="There is an image with Santa Claus on his sleigh. His reindeers are dragging his sleigh.">
+    <img class="img6" src="Img/Reindeer.jpeg"
+        alt="There is an image with Santa Claus on his sleigh. His reindeers are dragging his sleigh.">
     <div class="Fun2">
         <img class="img2" src="Img/Jul.jpg" alt="Here we have a picture of 
                                                   a snowman, with a scarf with stripes and 
@@ -94,7 +95,7 @@
             Merry Christmas!
         </p>
 
-        <img class="img3" src="Img/ChristmasTree.png" alt="Here we have a picture of 
+        <img class="img3" src="Img/ChristmasTree.jpg" alt="Here we have a picture of 
                                                             a christmas tree in black, and standing in the front of a red 
                                                             background. It takes 50% og the page.">
         <section class="kilde3">
@@ -115,9 +116,7 @@
         a christmas tree in black, and standing in the front of a red 
         background. It is flipped from left to right, to right to left. 
         takes 50% og the page.The picture is placed on the right.">
-        <section>
 
-        </section>
     </div>
     <!--Footer-->
     <footer class="background2">
@@ -133,7 +132,7 @@
                 target="blank">"All I want for Christmas is you".</a>
         </div>
     </footer>
-    </main>
+   
     <!--Underneath we have buttons that lets you mute and unmute the music.-->
     <script>
         const volume_src = "Img/volume-high-outline.svg";
@@ -159,6 +158,6 @@
             audio_on = !audio_on;
         }
     </script>
+     </main>
 </body>
-
 </html>

@@ -21,8 +21,7 @@ body{
     font-size: 0.5em;
     min-height: 100vh;
     width: 100vw;
-    color: whitesmoke; 
-    overflow-x: hidden;  
+    color: whitesmoke;   
 }
 
 /*Works with the navigation bar.*/
@@ -45,10 +44,8 @@ main {
 
 /*Work on the looks of the navigation bar.*/
 #nav{
-  text-transform: underline;
   display: grid;
   grid-template-columns: auto auto auto auto auto;  
-  grid-column-gap: 5x;
   justify-content: space-around;  
   padding-top: 0.5em;
   font-size: 1.2em;  
@@ -129,11 +126,11 @@ button{
   border-radius: 3em;
   border: burlywood 1px solid;    
   font-weight: bold;
-  word-spacing: 1em;     
+  word-spacing: 1em;    
 }
 
 /*The buttons' functions.*/
-button:hover {
+.button:hover {
   background-color: burlywood;
   color: black;
 }
@@ -184,19 +181,16 @@ would make space between the lines, since we couldn't use "br".*/
 
 .text3{
   text-align: left;
-  font-size: century;
   grid-area: 4/1;    
 }
 
 .text4{
   text-align: left;
-  font-size: century;
   grid-area: 5/1;
 }
 
 .text5{
-  text-align: left;
-  font-size: century;    
+  text-align: left;  
   grid-area: 6/1;
   margin-bottom: 2em;
 }
@@ -215,7 +209,7 @@ would make space between the lines, since we couldn't use "br".*/
   grid-template-columns: 50% 50%;
 }
 
-/* Sets the specifications for the text in the footer.*/
+/*Work with the footer.*/
 .Claus{
 margin-left: 0.5rem;
 margin-right: 0.5rem;
@@ -227,7 +221,6 @@ padding-bottom: 0.2rem;
   width: 100%;
   height: 100%;
   grid-area: 1/1;
-  size: cover;
 }
 /*Works with the text with img2 as the background.*/
 p.img2{
@@ -242,11 +235,10 @@ p.img2{
   grid-area: 2/1;
 }
 
-/*This works with the last image, the image of the christmas tree at right bottom.*/
+/*This works with the forth image, the image of the christmas tree at right bottom.*/
 .img3{
   width: 100%;
   grid-area: 2/2;
-  size: 506.5px 285.08px;
 }
 .kilde3{
   grid-area: 1/2;
@@ -270,12 +262,12 @@ p.img4{
 .img5{
   width: 100%;
   grid-area: 2/1;
-  size: cover;
 }
+
+/*This works with the last image, with the reindeers.*/
 .img6{
   height: 16rem;
   width: 100%;
-  size: cover;
 }
 
 /*This works with the sound-button, placement*/
@@ -309,12 +301,12 @@ and (min-width: 600px){
     }
 }
 
+
 /* For skjermer som er større enn 960px */
 @media only screen and (min-width: 960px){
     html {
         font-size: 3rem;
     }   
-
     .text6{ 
       grid-template-columns: 40% 60%;      
     }
